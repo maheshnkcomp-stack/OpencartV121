@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>com.opencart</groupId>
+   <artifactId>OpenCartV121</artifactId>
+   <version>1.0-SNAPSHOT</version>
+   <name>OpenCartV121</name>
+   
+   <build>
+  <plugins>
+    <!-- Compiler Plugin (sets Java version) -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.11.0</version>
+      <configuration>
+        <source>17</source>   <!-- Java source version -->
+        <target>17</target>   <!-- Java target version -->
+      </configuration>
+    </plugin>
+
+    <!-- Surefire Plugin (runs TestNG/JUnit tests) -->
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.5</version>
+    <configuration>
+        <suiteXmlFiles>
+            <!-- Use relative path to your master.xml -->
+            <suiteXmlFile>src/test/resources/master.xml</suiteXmlFile>
+        </suiteXmlFiles>
+        <!-- Optional: avoid fork issues -->
+        <forkCount>1</forkCount>
+        <reuseForks>false</reuseForks>
+    </configuration>
+</plugin>
+
+
+
+</plugins>
+
+</build>
+
+
+   <dependencies>
+   
+      <!-- ✅ WebDriverManager -->
+      <dependency>
+         <groupId>io.github.bonigarcia</groupId>
+         <artifactId>webdrivermanager</artifactId>
+         <version>5.9.2</version>
+      </dependency>
+
+      <!-- ✅ Selenium Java -->
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-java</artifactId>
+         <version>4.25.0</version>
+      </dependency>
+
+      <!-- ✅ Selenium DevTools (closest to Chrome 140) -->
+      <dependency>
+         <groupId>org.seleniumhq.selenium</groupId>
+         <artifactId>selenium-devtools-v128</artifactId>
+         <version>4.25.0</version>
+      </dependency>
+
+      <!-- ✅ Apache POI (Excel handling) -->
+      <dependency>
+         <groupId>org.apache.poi</groupId>
+         <artifactId>poi</artifactId>
+         <version>5.4.1</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.poi</groupId>
+         <artifactId>poi-ooxml</artifactId>
+         <version>5.4.1</version>
+      </dependency>
+
+      <!-- ✅ Log4j for logging -->
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-core</artifactId>
+         <version>2.25.2</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-api</artifactId>
+         <version>2.25.2</version>
+      </dependency>
+      <!-- ✅ Correct SLF4J binding for Log4j 2.x -->
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-slf4j2-impl</artifactId>
+         <version>2.25.2</version>
+      </dependency>
+
+      <!-- ✅ Commons IO -->
+      <dependency>
+         <groupId>commons-io</groupId>
+         <artifactId>commons-io</artifactId>
+         <version>2.17.0</version>
+      </dependency>
+
+      <!-- ✅ Commons Lang3 -->
+      <dependency>
+         <groupId>org.apache.commons</groupId>
+         <artifactId>commons-lang3</artifactId>
+         <version>3.14.0</version>
+      </dependency>
+
+      <!-- ✅ TestNG -->
+      <dependency>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+         <version>7.10.2</version>
+      </dependency>
+
+      <!-- ✅ Extent Reports -->
+      <dependency>
+         <groupId>com.aventstack</groupId>
+         <artifactId>extentreports</artifactId>
+         <version>5.1.1</version>
+      </dependency>
+
+   </dependencies>
+</project>

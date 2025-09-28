@@ -1,0 +1,4 @@
+2025-09-28 23:03:01.948 [main] INFO  testCases.AccountRegistration - account registration succefully
+2025-09-28 23:03:20.264 [main] INFO  testCases.TC002_LoginTest - starting account login
+2025-09-28 23:03:22.269 [main] INFO  testCases.TC002_LoginTest - providing credential
+2025-09-28 23:03:24.503 [main] INFO  testCases.TC002_LoginTest - *********finished tc002_loginttest****
